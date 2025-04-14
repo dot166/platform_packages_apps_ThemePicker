@@ -85,6 +85,7 @@ android_library {
         "androidx.compose.ui_ui-tooling",
         "androidx.lifecycle_lifecycle-runtime-compose",
         "androidx.lifecycle_lifecycle-viewmodel-compose",
+        "j.Lib",
     ],
 
     srcs: [
