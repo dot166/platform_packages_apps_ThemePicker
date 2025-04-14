@@ -613,4 +613,6 @@
     [CHAR LIMIT=128].
     -->
     <string name="custom_clocks_label">Custom Clocks</string>
+    <string name="preview_name_te">ThemeEngine</string>
+    <string name="click_here_for_themeengine_preferences">Click here for ThemeEngine Preferences</string>
 </resources>

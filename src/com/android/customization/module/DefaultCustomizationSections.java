@@ -14,6 +14,7 @@ import com.android.customization.model.themedicon.ThemedIconSwitchProvider;
 import com.android.customization.model.themedicon.domain.interactor.ThemedIconInteractor;
 import com.android.customization.model.themedicon.domain.interactor.ThemedIconSnapshotRestorer;
 import com.android.customization.module.logging.ThemesUserEventLogger;
+import com.android.customization.module.te.ThemeEngineSectionController;
 import com.android.customization.picker.clock.ui.view.ClockViewFactory;
 import com.android.customization.picker.clock.ui.viewmodel.ClockCarouselViewModel;
 import com.android.customization.picker.color.domain.interactor.ColorPickerInteractor;
@@ -190,6 +191,8 @@ public final class DefaultCustomizationSections implements CustomizationSections
                                         .get(NotificationSectionViewModel.class),
                                 lifecycleOwner));
 
+                sectionControllers.add(new ThemeEngineSectionController());
+
                 // More settings section.
                 sectionControllers.add(new MoreSettingsSectionController());
                 break;
@@ -211,6 +214,8 @@ public final class DefaultCustomizationSections implements CustomizationSections
                                     mColorContrastSectionViewModelFactory)
                                     .get(ColorContrastSectionViewModel.class), lifecycleOwner));
                 }
+
+                sectionControllers.add(new ThemeEngineSectionController());
                 // App grid section.
                 sectionControllers.add(
                         new GridSectionController(

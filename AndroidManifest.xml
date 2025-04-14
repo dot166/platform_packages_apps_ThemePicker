@@ -61,7 +61,7 @@
     </queries>
 
     <application
-        tools:replace="android:icon,android:name"
+        tools:replace="android:icon,android:name,android:theme"
         android:extractNativeLibs="false"
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_home"
