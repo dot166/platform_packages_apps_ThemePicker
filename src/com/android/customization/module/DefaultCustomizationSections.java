@@ -14,6 +14,7 @@ import com.android.customization.model.themedicon.ThemedIconSwitchProvider;
 import com.android.customization.model.themedicon.domain.interactor.ThemedIconInteractor;
 import com.android.customization.model.themedicon.domain.interactor.ThemedIconSnapshotRestorer;
 import com.android.customization.module.logging.ThemesUserEventLogger;
+import com.android.customization.picker.BaseApplication;
 import com.android.customization.picker.clock.ui.view.ClockViewFactory;
 import com.android.customization.picker.clock.ui.viewmodel.ClockCarouselViewModel;
 import com.android.customization.picker.color.domain.interactor.ColorPickerInteractor;
@@ -190,6 +191,16 @@ public final class DefaultCustomizationSections implements CustomizationSections
                                         .get(NotificationSectionViewModel.class),
                                 lifecycleOwner));
 
+                if (((BaseApplication)activity.getApplicationContext()).getTEManager(activity) != null) {
+                    if (((BaseApplication)activity.getApplicationContext()).getTEController(((BaseApplication)activity.getApplicationContext()).getTEManager(activity), sectionNavigationController) != null) {
+                        sectionControllers.add(
+                                ((BaseApplication)activity.getApplicationContext()).getTEController(
+                                        ((BaseApplication)activity.getApplicationContext()).getTEManager(activity),
+                                        sectionNavigationController)
+                        );
+                    }
+                }
+
                 // More settings section.
                 sectionControllers.add(new MoreSettingsSectionController());
                 break;
@@ -210,6 +221,16 @@ public final class DefaultCustomizationSections implements CustomizationSections
                             new ColorContrastSectionController(new ViewModelProvider(activity,
                                     mColorContrastSectionViewModelFactory)
                                     .get(ColorContrastSectionViewModel.class), lifecycleOwner));
+                }
+
+                if (((BaseApplication)activity.getApplicationContext()).getTEManager(activity) != null) {
+                    if (((BaseApplication)activity.getApplicationContext()).getTEController(((BaseApplication)activity.getApplicationContext()).getTEManager(activity), sectionNavigationController) != null) {
+                        sectionControllers.add(
+                                ((BaseApplication)activity.getApplicationContext()).getTEController(
+                                        ((BaseApplication)activity.getApplicationContext()).getTEManager(activity),
+                                        sectionNavigationController)
+                        );
+                    }
                 }
                 // App grid section.
                 sectionControllers.add(

@@ -15,9 +15,8 @@
  */
 package com.android.customization.picker;
 
-import android.app.Application;
-
 import com.android.customization.module.CustomizationInjector;
+import com.android.customization.picker.BaseApplication;
 import com.android.wallpaper.module.InjectorProvider;
 
 import dagger.hilt.android.HiltAndroidApp;
@@ -27,7 +26,7 @@ import javax.inject.Inject;
 /**
  * Application subclass that initializes the injector.
  */
-@HiltAndroidApp(Application.class)
+@HiltAndroidApp(BaseApplication.class)
 public class CustomizationPickerApplication extends Hilt_CustomizationPickerApplication {
 
     @Inject

@@ -74,6 +74,7 @@ android_library {
         "androidx.recyclerview_recyclerview",
         "SystemUICustomizationLib",
         "hilt_android",
+        "j.Lib",
     ],
 
     srcs: [

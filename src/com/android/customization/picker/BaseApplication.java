@@ -1,0 +1,22 @@
+package com.android.customization.picker;
+
+import androidx.fragment.app.FragmentActivity;
+
+import com.android.customization.model.CustomizationManager;
+import com.android.wallpaper.model.CustomizationSectionController;
+
+import io.github.dot166.jlib.app.jLIBCoreApp;
+
+/**
+ * Common Application subclass, used for ThemeEngine support.
+ */
+public class BaseApplication extends jLIBCoreApp {
+
+    public static CustomizationSectionController<?> getTEController(CustomizationManager<?> themeEngineOptionsManager, CustomizationSectionNavigationController sectionNavigationController) {
+        return null; // default
+    }
+
+    public static CustomizationManager<?> getTEController(FragmentActivity activity) {
+        return null; // default
+    }
+}
