@@ -12,11 +12,11 @@ import io.github.dot166.jlib.app.jLIBCoreApp;
  */
 public class BaseApplication extends jLIBCoreApp {
 
-    public static CustomizationSectionController<?> getTEController(CustomizationManager<?> themeEngineOptionsManager, CustomizationSectionNavigationController sectionNavigationController) {
+    public CustomizationSectionController<?> getTEController(CustomizationManager<?> themeEngineOptionsManager, CustomizationSectionNavigationController sectionNavigationController) {
         return null; // default
     }
 
-    public static CustomizationManager<?> getTEController(FragmentActivity activity) {
+    public CustomizationManager<?> getTEController(FragmentActivity activity) {
         return null; // default
     }
 }
