@@ -16,7 +16,7 @@ public class BaseApplication extends jLIBCoreApp {
         return null; // default
     }
 
-    public CustomizationManager<?> getTEController(FragmentActivity activity) {
+    public CustomizationManager<?> getTEManager(FragmentActivity activity) {
         return null; // default
     }
 }
