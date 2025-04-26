@@ -12,7 +12,7 @@ import io.github.dot166.jlib.app.jLIBCoreApp;
  */
 public class BaseApplication extends jLIBCoreApp {
 
-    public CustomizationSectionController<?> getTEController(CustomizationManager<?> themeEngineOptionsManager, CustomizationSectionNavigationController sectionNavigationController) {
+    public CustomizationSectionController<?> getTEController(CustomizationManager<?> themeEngineOptionsManager, CustomizationSectionController.CustomizationSectionNavigationController sectionNavigationController) {
         return null; // default
     }
 
